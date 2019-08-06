@@ -18,7 +18,8 @@ node_modules
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
-
+image/*
+img/*
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries

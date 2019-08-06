@@ -14,6 +14,8 @@ https.get(url, function(res) {
         html += data;
     })
     res.on('end', function() {
+        var imageUrl = html.find('.mess img').attr("src");
+        console.log('imageUrl：'+imageUrl)
         // 将抓取的内容保存到本地文件中
         fs.writeFile('index.html', html, function(err) {
             if (err) {
