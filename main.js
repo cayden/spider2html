@@ -82,18 +82,15 @@ download(url, function (data) {
                 },
                 function (callback) {
                     console.log('saveMap:' + map.size)
+                    /**
+                     * 循环map 替换图片
+                     */
                     map.forEach(function(value, key){
-                        console.log('key:' + key+',value'+value)
                         data= data.replace(key,value)
+                        console.log('key:' + key+',value:'+value)
                     });
 
-                    // for(var key in map)
-                    // {
-                    //     console.log('key:' + key+',map[key]'+map[key])
-                    //     // alert(key+"-"+map[key]);
-                    //     data.replace(key,map[key])
-                    //
-                    // }
+
                     // 将抓取的内容保存到本地文件中
                     fs.writeFile(dst, data, function (err) {
                         if (err) {
